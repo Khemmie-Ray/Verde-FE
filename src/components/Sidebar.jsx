@@ -17,7 +17,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className='bg-secondary w-[25%]  p-8 py-4 h-[100vh] hidden lg:flex flex-col md:flex'>
+    <div className='bg-secondary w-[20%]  p-8 py-4 h-[100vh] hidden lg:flex flex-col md:flex'>
       <img src={logo} alt="" className="w-[200px] mb-16 mt-4"/>
       <NavLink to="/dashboard" className="text-[18px] text-primary  font-[700] flex items-center py-4 mb-4 px-4" style={({isActive}) => isActive ? activeStyle : null } end><CgHomeAlt className="mr-4" />Dashboard</NavLink>
       <div className="mt-auto">

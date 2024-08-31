@@ -15,7 +15,7 @@ const style = {
     p: 4,
   };
 
-const CreateOrg = () => {
+const Register = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -23,7 +23,7 @@ const CreateOrg = () => {
   return (
     <div>
     <div>
-      <button className="bg-primary text-secondary py-2 px-4 rounded-lg lg:text-[20px] md:text-[20px] font-bold text-[16px] w-[100%] lg:w-[50%] md:w-[50%] my-2 hover:bg-bg-ash hover:text-darkGrey hover:font-bold" onClick={handleOpen}>Create Organization</button>
+      <button className="bg-primary text-secondary py-2 px-4 rounded-lg lg:text-[20px] md:text-[20px] font-bold text-[16px] w-[100%] lg:w-[50%] md:w-[50%] my-2 hover:bg-bg-ash hover:text-darkGrey hover:font-bold" onClick={handleOpen}>Join Campaign</button>
 <Modal
         open={open}
         onClose={handleClose}
@@ -31,12 +31,10 @@ const CreateOrg = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <label className="form-label font-bold text-[20px] text-white">Select an image</label>
-          <p>File must not be more than 100KB </p>
-          <input type="file" className="rounded-lg w-[100%] text-white p-4 bg-[#ffffff23] border border-white/50 backdrop-blur-lg mb-4 outline-none"  placeholder=''/>
-          <input type="text" className="rounded-lg w-[100%] text-white p-4 bg-[#ffffff23] border border-white/50 backdrop-blur-lg mb-4 outline-none"  placeholder=''Company name/>
-          <input type="text" className="rounded-lg w-[100%] text-white p-4 bg-[#ffffff23] border border-white/50 backdrop-blur-lg mb-4 outline-none"  placeholder=''/>
+          <input type="text" className="rounded-lg w-[100%] text-white p-4 bg-[#ffffff23] border border-white/50 backdrop-blur-lg mb-4 outline-none"  placeholder='Name' />
+          <input type="text" className="rounded-lg w-[100%] text-white p-4 bg-[#ffffff23] border border-white/50 backdrop-blur-lg mb-4 outline-none"  placeholder='Email' />
 
+          <input type="text" className="rounded-lg w-[100%] text-white p-4 bg-[#ffffff23] border border-white/50 backdrop-blur-lg mb-4 outline-none"  placeholder='Wallet address'/>
           <button className="bg-secondary text-primary py-2 px-4 rounded-lg font-bold text-[16px] w-[100%] my-2 hover:bg-bg-ash hover:text-darkGrey hover:font-bold">Submit</button>  
         </Box>
       </Modal>
@@ -45,4 +43,4 @@ const CreateOrg = () => {
   )
 }
 
-export default CreateOrg
+export default Register
