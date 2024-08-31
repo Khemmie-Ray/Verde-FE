@@ -1,17 +1,17 @@
 import { ethers } from "ethers";
-import earnAbi from "./earnAbi.json"
-import tokenAbi from './tokenAbi.json'
+import rewardABI from "./rewardABI.json";
+import { OrganisationFactoryABI } from "./organisationFactory";
 
-export const getVerdiContract= (providerOrSigner) =>
-    new ethers.Contract(
-        import.meta.env.VITE_REWARD_ADDRESS,
-        tokenAbi,
-        providerOrSigner
-    );
+export const getVerdiContract = (providerOrSigner) =>
+  new ethers.Contract(
+    import.meta.env.VITE_REWARD_ADDRESS,
+    rewardABI,
+    providerOrSigner
+  );
 
 export const getOrganizationContract = (providerOrSigner) =>
-    new ethers.Contract(
-        import.meta.env.VITE_ORGANIZATION_ADDRESS,
-        earnAbi,
-        providerOrSigner
-    );
+  new ethers.Contract(
+    import.meta.env.VITE_ORGANIZATION_FACTORY_ADDRESS,
+    OrganisationFactoryABI,
+    providerOrSigner
+  );
