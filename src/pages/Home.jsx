@@ -3,6 +3,8 @@ import heroImg from '../assets/hero-img.svg'
 import aboutImg from '../assets/abt.svg'
 
 const Home = () => {
+  const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum dapibus elementum. Maecenas ac magna a nisi placerat vehicula. Vivamus venenatis.";
+
   return (
     <main>
       <section className="bg-secondary h-[50vh] relative">
@@ -29,12 +31,16 @@ const Home = () => {
         </div>
         </div>
       </section>
-      <section className="bg-secondary py-8">
+      <section className="bg-secondary py-8 ">
       <h2 className="text-[24px] lg:text-[48px] md:text-[48px] text-center text-primary my-4"> Featured Campaigns</h2>
-      <div>
-        <div>
-          <img src="" alt="" />
-        <h2 className="text-[24px] lg:text-[48px] md:text-[48px] text-center text-primary my-4">How it Works</h2>
+      <div className="flex justify-between  w-[100%] lg:w-[90%] md:w-[90%] mx-auto flex-wrap">
+        <div className="w-[100%] lg:w-[32%] md:w-[32%] bg-white">
+          <img src="https://img.freepik.com/free-photo/group-happy-african-volunteers-planting-tree-park-africa-volunteering-charity-people-ecology-concept_627829-320.jpg?size=626&ext=jpg&ga=GA1.1.663094344.1720174275&semt=ais_hybrid" alt=""  className="object-cover object-center h-[20vh] w-[100%]"/>
+          <div className="p-6">
+        <h2 className="text-[24px] lg:text-[32px] md:text-[32px] text-primary">EarthFund</h2>
+        <p className="text-gray mb-2 text-[18px] lg:text-[20px] md:text-[20px]">Clean Water Initiative</p>
+        {description.slice(0, 50)}... SEE MORE
+        </div>
         </div>
       </div>
       </section>

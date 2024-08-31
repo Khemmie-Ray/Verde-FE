@@ -8,6 +8,8 @@ import {
 import HomeLayout from './Layout/HomeLayout';
 import Home from './pages/Home';
 import Campaigns from './pages/Campaigns';
+import { configWeb3Modal } from './connection';
+configWeb3Modal();
 
 const router = createBrowserRouter(
   createRoutesFromElements(

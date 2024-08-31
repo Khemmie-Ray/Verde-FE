@@ -11,7 +11,7 @@ const Header = () => {
             <NavLink to='/' className='mr-10'>Home</NavLink>
             <NavLink to='/campaigns'>Campaigns</NavLink>
         </div>
-        <button>Connect Wallet</button>
+        <w3m-button />
         </div>
     </header>
   )
