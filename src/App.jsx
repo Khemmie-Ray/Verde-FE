@@ -7,8 +7,12 @@ import {
 } from "react-router-dom";
 import HomeLayout from './Layout/HomeLayout';
 import Home from './pages/Home';
+import Profile from './pages/Dashboard/Profile';
 import Campaigns from './pages/Campaigns';
 import { configWeb3Modal } from './connection';
+import Dashboard from './pages/Dashboard/Dashboard';
+import DashboardLayout from './Layout/DashboardLayout';
+
 configWeb3Modal();
 
 const router = createBrowserRouter(
@@ -18,6 +22,10 @@ const router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path='/campaigns' element={<Campaigns />} />
       </Route>
+      <Route path='/dashboard' element={<DashboardLayout />}>
+      <Route index element={<Dashboard />} />
+      </Route>
+      <Route path='/profile' element={<Profile />}/>
     </Route>
   )
 );
