@@ -7,6 +7,7 @@ import axios from "axios";
 
 import useCreateNewProgramme from "../hooks/onboardingHooks/useCreateNewProgrammes";
 import useGetUserOrganisations from "../hooks/onboardingHooks/useGetUserOrganizations";
+import { useNavigate } from "react-router-dom";
 const style = {
   position: "absolute",
   top: "50%",
@@ -21,7 +22,7 @@ const style = {
   p: 4,
 };
 
-const CreateOrg = () => {
+const CreateOrg = (apiKey, secretKey) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -115,6 +116,7 @@ const CreateOrg = () => {
   // redirect to programme page if not connected
   const change = useCallback(async () => {
     if (!isConnected) {
+      useNavigate("/");
       // router.push("/programme");
     }
   }, [isConnected]);
@@ -184,7 +186,10 @@ const CreateOrg = () => {
               placeholder=""
             />
 
-            <button className="bg-secondary text-primary py-2 px-4 rounded-lg font-bold text-[16px] w-[100%] my-2 hover:bg-bg-ash hover:text-darkGrey hover:font-bold">
+            <button
+              className="bg-secondary text-primary py-2 px-4 rounded-lg font-bold text-[16px] w-[100%] my-2 hover:bg-bg-ash hover:text-darkGrey hover:font-bold"
+              onClick={handleSubmit}
+            >
               Submit
             </button>
           </Box>

@@ -25,8 +25,10 @@ const useCreateNewProgramme = (
 
   const { isLoading: isConfirming, isSuccess: isConfirmed } =
     useWaitForTransactionReceipt({
-      hash,
+      hash: hash?.toString(),
     });
+
+  console.log(hash);
 
   const toastId = "createorganisation";
 
